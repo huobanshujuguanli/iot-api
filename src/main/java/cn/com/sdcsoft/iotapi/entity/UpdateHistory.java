@@ -7,8 +7,8 @@ import java.util.Date;
 
 
 public class UpdateHistory implements Serializable {
-    private int id, rawState,nowState;
-    private String simNo;
+    private int id;
+    private String simNo, rawState,nowState;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
     private Date createDatetime;
@@ -21,19 +21,19 @@ public class UpdateHistory implements Serializable {
         this.id = id;
     }
 
-    public int getRawState() {
+    public String getRawState() {
         return rawState;
     }
 
-    public void setRawState(int rawState) {
+    public void setRawState(String rawState) {
         this.rawState = rawState;
     }
 
-    public int getNowState() {
+    public String getNowState() {
         return nowState;
     }
 
-    public void setNowState(int nowState) {
+    public void setNowState(String nowState) {
         this.nowState = nowState;
     }
 

@@ -4,8 +4,8 @@ import java.io.Serializable;
 
 
 public class Sim implements Serializable {
-    private int id, lifecycle,state;
-    private String simNo;
+    private int id;
+    private String simNo,lifecycle,state;
 
     public int getId() {
         return id;
@@ -15,19 +15,19 @@ public class Sim implements Serializable {
         this.id = id;
     }
 
-    public int getLifecycle() {
+    public String getLifecycle() {
         return lifecycle;
     }
 
-    public void setLifecycle(int lifecycle) {
+    public void setLifecycle(String lifecycle) {
         this.lifecycle = lifecycle;
     }
 
-    public int getState() {
+    public String getState() {
         return state;
     }
 
-    public void setState(int state) {
+    public void setState(String state) {
         this.state = state;
     }
 
