@@ -16,7 +16,7 @@ public interface UpdateHistoryMapper {
             "<if test='simNo!= null and simNo.length>0 '> " +
             "AND SimNo = #{simNo}"+
             "</if>" +
-            "<if test='type!= null  '> " +
+            "<if test='type!= 0  '> " +
             "AND Type = #{type}"+
             "</if>" +
             "</where>" +
