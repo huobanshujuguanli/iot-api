@@ -20,7 +20,7 @@ public class SimController {
     private SimMapper simMapper;
 
     @PostMapping("/find")
-    public List<Sim> find(Sim sim) {
+    public List<Sim> find(@RequestBody Sim sim) {
         return simMapper.findSim(sim);
     }
 }
