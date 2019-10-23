@@ -7,7 +7,7 @@ import java.util.Date;
 
 
 public class UpdateHistory implements Serializable {
-    private int id;
+    private int id,type;
     private String simNo, rawState,nowState;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
@@ -19,6 +19,14 @@ public class UpdateHistory implements Serializable {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
     }
 
     public String getRawState() {
