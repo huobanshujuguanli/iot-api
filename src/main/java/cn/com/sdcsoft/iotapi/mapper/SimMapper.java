@@ -15,10 +15,10 @@ public interface SimMapper {
             "<if test='simNo!= null and simNo.length>0 '> " +
             "AND SimNo = #{simNo}"+
             "</if>" +
-            "<if test='lifecycle!= null'> " +
+            "<if test='lifecycle!= null and lifecycle.length>0'> " +
             "AND Lifecycle = #{lifecycle}"+
             "</if>" +
-            "<if test='state!= null'> " +
+            "<if test='state!= null and state.length>0'> " +
             "AND State = #{state}"+
             "</if>" +
             "</where>" +
