@@ -45,6 +45,7 @@ public class CheckController {
             JSONObject result = JSONObject.parseObject(execute.body().string());
             execute.close();
             JSONArray result1 = JSONObject.parseArray(result.get("result").toString());
+
             if(result.get("status").equals("0")&!result1.getJSONObject(0).get("lifecycle").equals(simList.get(i).getLifecycle())){
                 simSql+="update Sim set Lifecycle="+result1.getJSONObject(0).get("lifecycle");
                 updateSql="insert into Updatehistory (SimNo,RawState,NowState,CreateDatetime,Type) values ( '"+simList.get(i).getSimNo()+"' ,"+simList.get(i).getLifecycle()+","+result1.getJSONObject(0).get("lifecycle")+",now(),1)";
@@ -56,6 +57,7 @@ public class CheckController {
                 execute = okHttpClient.newCall(cookieRequest).execute();
                 JSONObject result2 = JSONObject.parseObject(execute.body().string());
                 JSONArray result3 = JSONObject.parseArray(result2.get("result").toString());
+
                 if(result2.get("status").equals("0")&!result3.getJSONObject(0).get("GPRSSTATUS").equals(simList.get(i).getState())){
 
                     if(result3.getJSONObject(0).get("GPRSSTATUS").equals("")){

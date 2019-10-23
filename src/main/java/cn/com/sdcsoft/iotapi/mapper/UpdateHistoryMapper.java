@@ -16,10 +16,10 @@ public interface UpdateHistoryMapper {
             "<if test='simNo!= null and simNo.length>0 '> " +
             "AND SimNo = #{simNo}"+
             "</if>" +
-            "<if test='RawState!= null and rawState.length>0 '> " +
+            "<if test='rawState!= null and rawState.length>0 '> " +
             "AND RawState = #{rawState}"+
             "</if>" +
-            "<if test='NowState!= null and nowState.length>0 '> " +
+            "<if test='nowState!= null and nowState.length>0 '> " +
             "AND NowState = #{nowState}"+
             "</if>" +
             "<if test='type!= 0  '> " +
