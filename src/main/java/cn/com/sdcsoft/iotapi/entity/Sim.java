@@ -1,14 +1,35 @@
 package cn.com.sdcsoft.iotapi.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
+import java.util.Date;
 
 
 public class Sim implements Serializable {
     private int id;
-    private String simNo,lifecycle,state;
+    private String simNo,lifecycle,state,cardState;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
+    private Date OpeningDate;
     public int getId() {
         return id;
+    }
+
+    public Date getOpeningDate() {
+        return OpeningDate;
+    }
+
+    public void setOpeningDate(Date openingDate) {
+        OpeningDate = openingDate;
+    }
+
+    public String getCardState() {
+        return cardState;
+    }
+
+    public void setCardState(String cardState) {
+        this.cardState = cardState;
     }
 
     public void setId(int id) {

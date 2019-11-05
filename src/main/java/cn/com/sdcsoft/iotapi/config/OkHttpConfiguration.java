@@ -21,7 +21,8 @@ public class OkHttpConfiguration {
     @Bean
     public  OkHttpClient okHttpClient() {
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
-        builder.connectTimeout(1, TimeUnit.MINUTES);
+        builder.connectTimeout(10, TimeUnit.MINUTES);
+        builder.readTimeout(20, TimeUnit.SECONDS);
         Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("39.96.216.30", 3128));
         builder.proxy(proxy);
         CookieManager cookieManager = new CookieManager();
