@@ -21,7 +21,7 @@ public interface SimMapper {
             "<if test='state!= null and state.length>0'> " +
             "AND State = #{state}"+
             "</if>" +
-            "<if test='cardState!= null and state.length>0'> " +
+            "<if test='cardState!= null and cardState.length>0'> " +
             "AND CardState = #{cardState}"+
             "</if>" +
             "</where>" +
