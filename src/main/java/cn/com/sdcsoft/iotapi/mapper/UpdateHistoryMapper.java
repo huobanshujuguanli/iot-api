@@ -10,7 +10,7 @@ import java.util.List;
 public interface UpdateHistoryMapper {
 
     @Select("<script>" +
-            "select * from UpdateHistory " +
+            "select * from UpdateHistory" +
             "<where>" +
             "1=1 " +
             "<if test='simNo!= null and simNo.length>0 '> " +
