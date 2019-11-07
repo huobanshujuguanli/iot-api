@@ -4,6 +4,7 @@ package cn.com.sdcsoft.iotapi.controller;
 import cn.com.sdcsoft.iotapi.client.TemplateClient;
 import com.alibaba.fastjson.JSON;
 import feign.Feign;
+import okhttp3.Credentials;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;

@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>cn.com.sdcsoft.iot-api</groupId>
-	<artifactId>demo</artifactId>
+	<artifactId>iot-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>iot-api</name>
 	<description>Demo project for Spring Boot</description>
